@@ -1,0 +1,16 @@
+{
+  "name" : "Kullanıcı Login",
+  "endpoint" : "user/login",
+  "method" : "post",
+  "send" : {
+    "email":"okan.yuksel@ward.agency",
+    "password":123456,
+    "encr":"AlciyiKirdinMi"
+  },
+  "expected" : [
+    {"data": "status", "value" : true}
+  ],
+  "remember" : [
+
+  ]
+}

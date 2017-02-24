@@ -1,0 +1,4 @@
+{
+    "name" : "Account Açarak Kayıt Olan Kullanıcı",
+    "order" : ["device-register","user-account-register"]
+}

@@ -1,0 +1,4 @@
+{
+    "name" : "User Login Senaryosu",
+    "order" : ["device-register","user-login"]
+}

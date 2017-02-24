@@ -1,0 +1,20 @@
+{
+  "name" : "Hesap Açarak Kaydolan Kullanıcı",
+  "endpoint" : "user/register",
+  "method" : "post",
+  "send" : {
+    "first_name":"okan",
+    "last_name":"yüksel",
+    "email":"okan1.yuksel@ward.agency",
+    "password":123456,
+    "phone":"0555 444 44 44",
+    "position":"developer",
+    "company":"ward",
+    "type":"account",
+    "encr":"AlciyiKirdinMi"
+  },
+  "expected" : [
+    {"data": "status", "value" : true}
+  ],
+  "remember" : []
+}

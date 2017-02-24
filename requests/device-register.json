@@ -1,0 +1,15 @@
+{
+  "name" : "Cihaz Kayıt",
+  "endpoint" : "device/register",
+  "method" : "post",
+  "send" : {
+    "language": "tr",
+    "type": "ios",
+    "app_version": "dev",
+    "encr" : "AlciyiKirdinMi"
+  },
+  "expected" : [
+    {"data": "status", "value" : true}
+  ],
+  "remember" : ["token"]
+}
