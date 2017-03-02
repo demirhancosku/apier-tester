@@ -1,0 +1,4 @@
+{
+    "name" : "News Feed Senaryosu",
+    "order" : ["device-register","user-login","ticket-permission","get-feed"]
+}

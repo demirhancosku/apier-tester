@@ -40,8 +40,20 @@ for (k in files) {
                     }
                     var serializedData = requestSerialize(requestInfo.send);
 
+
                     var res = client(requestInfo.method, config.base+'/'+requestInfo.endpoint + '/?' + serializedData);
+
                     var body = JSON.parse(res.body.toString('utf8'));
+
+                    console.log(body);
+                    if (res.statusCode >= 500) {
+                        console.log(colors.red(requestInfo.name + ' Fatal Error'));
+                        console.log("DATA: %j", data);
+                        console.log("URL: %j", config.base+'/'+requestInfo.endpoint);
+
+                    }else{
+                        var body = JSON.parse(res.body.toString('utf8'));
+                    }
 
                     evalRequest(scenarioInformation, requestInfo, body, resolve, reject);
 
@@ -49,7 +61,6 @@ for (k in files) {
 
 
                     var data = requestInfo.send;
-
                     for (x in remember) {
                         data = Object.assign(data, remember[x]);
                     }
@@ -59,7 +70,7 @@ for (k in files) {
                         json: data
                     });
 
-                    if (res.statusCode == 500) {
+                    if (res.statusCode >= 500) {
                         console.log(colors.red(requestInfo.name + ' Fatal Error'));
                         console.log("DATA: %j", data);
                         console.log("URL: %j", config.base+'/'+requestInfo.endpoint);
@@ -135,10 +146,13 @@ function makeRequests(i, chained) {
 
 function createResultObject(status, result) {
 
+
     var flag = "failed";
     if (status) {
         flag = "passed";
     }
+    console.log(result.requestInfo.name + ' ' + flag);
+
     return {
         "name": result.requestInfo.name,
         "url": config.base +'/'+ result.requestInfo.endpoint,

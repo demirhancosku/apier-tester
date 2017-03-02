@@ -1,0 +1,13 @@
+{
+  "name" : "Kullanıcıya Yetki Atama",
+  "endpoint" : "user/permissions",
+  "method" : "post",
+  "send" : {
+    "permissions":[2],
+    "encr":"AlciyiKirdinMi"
+  },
+  "expected" : [
+    {"data": "status", "value" : true}
+  ],
+  "remember" : []
+}

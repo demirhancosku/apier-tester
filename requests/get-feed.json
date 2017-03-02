@@ -1,0 +1,12 @@
+{
+  "name" : "Ticket Feed",
+  "endpoint" : "ticket/feed",
+  "method" : "get",
+  "send" : {
+    "encr":"AlciyiKirdinMi"
+  },
+  "expected" : [
+    {"data": "status", "value" : true}
+  ],
+  "remember" : []
+}

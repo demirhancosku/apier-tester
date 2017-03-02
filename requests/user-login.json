@@ -10,7 +10,5 @@
   "expected" : [
     {"data": "status", "value" : true}
   ],
-  "remember" : [
-
-  ]
+  "remember" : ["auth"]
 }
